@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api', // your backend URL
+  baseURL: 'https://fitnesstracker-218w.onrender.com', // your backend URL
 });
 
 instance.interceptors.request.use((config) => {
