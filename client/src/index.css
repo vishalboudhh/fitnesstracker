@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base Calendar Styling */
+.react-calendar {
+  @apply w-full max-w-full bg-white rounded-lg p-4 text-gray-800 transition-colors;
+}
+
+.dark .react-calendar {
+  @apply bg-gray-800 text-white;
+}
+
+/* Today tile */
+.react-calendar__tile--now {
+  @apply bg-blue-100 ;
+}
+.dark .react-calendar__tile--now {
+  @apply bg-blue-600 text-white;
+}
+
+/* Active tile */
+.react-calendar__tile--active {
+  @apply bg-blue-500 text-white font-bold;
+}
+.dark .react-calendar__tile--active {
+  @apply bg-blue-500 text-white font-bold;
+}
+
+/* Has Active */
+.react-calendar__tile--hasActive {
+  @apply bg-blue-200;
+}
+.dark .react-calendar__tile--hasActive {
+  @apply bg-blue-700 ;
+}
+
+/* Highlighted custom dates */
+.highlighted-date {
+  @apply  font-bold rounded-full;
+}
+.dark .highlighted-date {
+  @apply  rounded-full;
+}
+
+/* ✅ Hover Fix */
+.react-calendar__tile:hover {
+  @apply  text-black bg-black;
+}
+.dark .react-calendar__tile:hover {
+  @apply  text-black ;
+}
+
+
